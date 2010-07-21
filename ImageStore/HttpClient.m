@@ -126,7 +126,6 @@
 - (void)connection:(NSURLConnection*)sender didFailWithError:(NSError*)error
 {
 	if (conn != sender) return;
-	NSLog(@"fail");	
 	[self cancel];
 	
 	if ([delegate respondsToSelector:@selector(httpClientFailed:error:)]) {
